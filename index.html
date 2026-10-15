@@ -10,7 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&family=Manrope:wght@200..800&family=Spicy+Rice&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
   <title>backend-frontend</title>
 </head>
 
@@ -19,10 +20,11 @@
     <header>
       <div class="top-header">
         <img src="/public/logga.png" alt="The Greenhouse logga">
-        <span class="material-symbols-outlined">menu</span>
+        <span class="material-symbols-outlined hamburger-menu">menu</span>
       </div>
       <div class="bottom-header">
         <h1>Good food, <br> Brighter days</h1>
+        <img src="/public/coffee_clip.png" alt="En kopp med cappuccino">
         <p>Plant-based brunch, freshly baked sourdough, damn good coffee & cocktails</p>
         <div class="header-buttons">
           <button>Vår meny</button>
@@ -30,6 +32,118 @@
         </div>
       </div>
     </header>
+    <div class="selections">
+      <section class="selection eat">
+        <h2>Eat</h2>
+      </section>
+      <section class="selection takeaway">
+        <h2>Take Home</h2>
+      </section>
+      <section class="selection drink">
+        <h2>Drink</h2>
+      </section>
+    </div>
+    <section class="menu">
+      <h2>Vår meny</h2>
+      <section class="brunch"></section>
+      <section class="pastries"></section>
+      <section class="hot-drinks"></section>
+      <section class="cold-drinks"></section>
+      <section class="cocktails"></section>
+    </section>
+    <section class="orders">
+      <h2>Vårt bageri</h2>
+      <p class="intro-text">I vårt bageri finns allt från bullar, tårtor och surdegsbröd. Vi tar emot beställningar till
+        större evenemang
+        så som födelsedagsfester, konferenser eller bröllop. Fyll i formuläret nedan för att göra en beställning.</p>
+      <div class="form-container">
+        <form class="order-form">
+          <h3>Gör en beställningsförfrågan</h3>
+          <p>Fyll i fälten i formuläret för att skicka en förfrågan.</p>
+          <p><b>OBS!</b> Beställningen är <b>inte</b> klar förrän du har fått en
+            bekräftelse på din mejl om att vi har godkänt din förfrågan.</p>
+          <fieldset class="customer-info">
+            <h4>Kunduppgifter</h4>
+            <div class="inputs">
+              <label for="name">För- och efternamn:</label>
+              <input type="text" name="name" id="name">
+            </div>
+            <div class="inputs">
+              <label for="telephone">Telefonnummer:</label>
+              <input type="number" name="phone" id="phone">
+            </div>
+            <div class="inputs">
+              <label for="email">Emailadress:</label>
+              <input type="email" name="email" id="email">
+            </div>
+          </fieldset>
+          <fieldset class="product-info">
+            <h4>Produktinformation</h4>
+            <div class="inputs">
+              <label for="product">Vad vill du beställa?</label>
+              <select name="productType" id="products">
+                <option value="strawberry-cake">Jordgubbstårta</option>
+                <option value="chocolate-cake">Chokladtårta</option>
+                <option value="sourdough">Surdegsbröd</option>
+                <option value="buns">Kanelbullar</option>
+                <option value="cupcakes">Blåbärsmuffins</option>
+              </select>
+            </div>
+            <div class="inputs">
+              <label for="servings">Hur många portioner vill du beställa?</label>
+              <input type="number" name="servings" id="servings"
+                placeholder="Skriv endast nummer ex. '12' om du önskar 12 portioner">
+            </div>
+            <div class="inputs">
+              <label for="message">Meddelande på tårta:</label>
+              <input type="text" name="message" id="message"
+                placeholder="Fyll bara i det här fältet om du har beställt en tårta">
+            </div>
+          </fieldset>
+          <fieldset class="delivery-info">
+            <h4>Upphämtning och övrigt</h4>
+            <div class="inputs">
+              <label for="delivery">Upphämtningsdatum:</label>
+              <input type="date" name="deliveryDate" id="delivery">
+            </div>
+            <div class="inputs">
+              <label for="comment">Kommentar till personalen t.ex allergier m.m.</label>
+              <textarea name="comment" id="comment" rows="5"></textarea>
+            </div>
+          </fieldset>
+          <div id="error-container"></div>
+          <button type="submit">Skicka förfrågan</button>
+        </form>
+        <div class="images">
+          <img src="/public/bread_display.png" alt="">
+          <img src="/public/cakes.png" alt="">
+          <img src="/public/pastries.png" alt="">
+        </div>
+      </div>
+    </section>
+    <div class="about">
+      <div class="aboutText-background">
+        <h2>Meet me at The Greenhouse</h2>
+        <p>The Greenhouse började med en ganska enkel idé – att skapa den typ av plats vi själva alltid letar efter. En
+          plats för långfrukostar, snabba kaffe, nybakat bröd och ett glas bubbel som plötsligt blir två.</p>
+        <p>Allt vi serverar är växtbaserat, men för oss har det alltid handlat om en sak först och främst: riktigt god
+          mat och en plats man vill stanna lite längre på.</p>
+      </div>
+      <img src="/public/location2.png" alt="">
+    </div>
+    <footer>
+      <div class="footer-logo">
+        <img src="public/logga.png" alt="">
+      </div>
+      <div class="footer-text">
+        <h2>Powered by plants & questionable amounts of coffee.</h2>
+        <div class="footer-adress">
+          <p>The Greenhouse</p>
+          <p>Hittepågatan 125</p>
+          <p>145 68 Uppsala</p>
+        </div>
+      </div>
+    </footer>
   </main>
   <script type="module" src="/src/js/main.js"></script>
 </body>
