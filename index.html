@@ -20,15 +20,14 @@
     <header>
       <div class="top-header">
         <img src="/public/logga.png" alt="The Greenhouse logga">
-        <span class="material-symbols-outlined hamburger-menu">menu</span>
       </div>
       <div class="bottom-header">
         <h1>Good food, <br> Brighter days</h1>
         <img src="/public/coffee_clip.png" alt="En kopp med cappuccino">
         <p>Plant-based brunch, freshly baked sourdough, damn good coffee & cocktails</p>
         <div class="header-buttons">
-          <button>Vår meny</button>
-          <button>Gör en beställning</button>
+          <a href="#menu-container" class="button">Se vår meny</a>
+          <a href="#orders" class="button">Gör en beställning</a>
         </div>
       </div>
     </header>
@@ -43,15 +42,21 @@
         <h2>Drink</h2>
       </section>
     </div>
-    <section class="menu">
-      <h2>Vår meny</h2>
-      <section class="brunch"></section>
-      <section class="pastries"></section>
-      <section class="hot-drinks"></section>
-      <section class="cold-drinks"></section>
-      <section class="cocktails"></section>
-    </section>
-    <section class="orders">
+    <div id="menu-container">
+      <section class="menu"></section>
+      <div class="menu-images">
+        <img src="/public/avocado_sourdough.png" alt="">
+        <img src="/public/brunch_plate.png" alt="">
+        <img src="/public/pancakes.png" alt="">
+        <img src="/public/soup.png" alt="">
+        <img src="/public/kaffe_bulle.png" alt="">
+        <img src="/public/pastries.png" alt="">
+        <img src="public/granolabowl.png" alt="">
+        <img src="/public/cakes.png" alt="">
+      </div>
+    </div>
+    
+    <section id="orders">
       <h2>Vårt bageri</h2>
       <p class="intro-text">I vårt bageri finns allt från bullar, tårtor och surdegsbröd. Vi tar emot beställningar till
         större evenemang

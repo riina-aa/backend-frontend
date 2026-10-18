@@ -1,0 +1,169 @@
+@media (max-width: 1024px) {
+
+    header {
+
+        .bottom-header {
+
+            h1 {
+                font-size: 92px;
+            }
+
+            img {
+                display: none;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .header-buttons {
+                .button {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .selections {
+        .selection {
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        .eat {
+            background-position: right;
+        }
+
+        .drink {
+            background-position: center;
+        }
+    }
+
+    #orders {
+        form {
+            width: 100%;
+
+            .inputs {
+                input {
+                    width: 100%;
+                }
+
+                select {
+                    width: 100%;
+                }
+
+                textarea {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    .about {
+        padding: 6rem 6rem 6rem 6rem;
+
+        .aboutText-background {
+            padding: 5rem 2rem;
+            width: 60%;
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+
+    footer {
+        .footer-logo {
+            border-radius: 300px;
+            padding: 3rem 0.5rem;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .footer-text {
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+
+        .bottom-header {
+
+            h1 {
+                font-size: 62px;
+            }
+        }
+    }
+
+    .selections {
+        padding: 0; 
+        justify-content: flex-start;
+
+        .selection {
+            width: 33.3%;
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    #menu-container {
+        .menu-images {
+            display: none;
+        }
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    #orders {
+        .form-container {
+            flex-direction: column;
+
+            .images {
+                flex-direction: row;
+                margin-left: -4rem;
+                margin-right: -4rem;
+
+                img {
+                    width: 33.3%;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    .about {
+        flex-direction: column;
+
+        .aboutText-background {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 2rem;
+        
+        .footer-logo {
+            margin-bottom: 3rem;
+        }
+
+        .footer-text {
+            text-align: center;
+        }
+    }
+}

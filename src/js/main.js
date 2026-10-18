@@ -106,6 +106,9 @@ function renderMenu(products) {
 
     selectedList.innerHTML = ""; //Tömmer listan innan ny rendering
 
+    selectedList.innerHTML = `
+        <h2>Vår meny</h2>
+    `
 
     const groupedProducts = products.reduce((groups, product) => {
 
@@ -125,8 +128,17 @@ function renderMenu(products) {
         const categorySection = document.createElement("section");
         categorySection.classList.add("menu-category");
 
+        const categoryNames = {
+            brunch: "Brunch & Lunch",
+            bakery: "Bakelser & Tårtor",
+            sourdough: "Surdegsbröd",
+            hotDrinks: "Varma drycker",
+            coldDrinks: "Kalla drycker",
+            cocktails: "Drinkar & Cocktails"
+        };
+
         categorySection.innerHTML = `
-            <h2>${category}</h2>
+            <h2>${categoryNames[category] || category}</h2>
             <div class="category-products"></div>
         `;
 
@@ -135,10 +147,10 @@ function renderMenu(products) {
         products.forEach((product) => {
             productContainer.innerHTML += `
                 <article class="menu-product">
-                    <img src="" alt="">
-                    <h3>${product.productName}</h3>
+                    <h3>${product.productName} | ${product.price} kr</h3>
                     <p>${product.description}</p>
-                    <p class="price">${product.price} kr</p>
+                    <p class="allergies">Allergier: ${product.allergies}</p>
+                    
                 </article>
             `;
         });
