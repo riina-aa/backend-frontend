@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function init() {
-    
+
     fetchMenu();
 
     const form = document.querySelector(".order-form");
@@ -66,15 +66,11 @@ async function addOrder(e) {
             body: JSON.stringify(order)
         });
 
-        console.log("Statuskod:", resp.status);
-        console.log("Lyckades anropet?", resp.ok);
-
         if (resp.ok) {
             const data = await resp.json();
 
-            messageContainer.innerHTML = `
-            <p>${data.message}</p>
-            `
+            messageContainer.textContent = "Tack för din beställning! Vi har tagit emot din förfrågan och återkommer till dig så snart som möjligt.";
+            
             const form = document.querySelector(".order-form");
 
             form.reset();
@@ -94,9 +90,11 @@ async function fetchMenu() {
 
     let data = await result.json();
 
-    renderMenu(data);
-    
-}; 
+    const visibleProducts = data.filter(product => product.available === true);
+
+    renderMenu(visibleProducts);
+
+};
 
 function renderMenu(products) {
 
